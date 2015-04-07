@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+    <div class="nav">
+      <div class="container">
+        <div class="row">
+          <ul class="pull-left">
+            <li class="dropdown">
+              <a data-toggle="dropdown" href="#">Member Login</a>
+              <ul class="dropdown-menu member-login" role="menu" aria-labelleby="dlabel">
+                <li>
+                  <div class="col-lg-12">
+                    <div class="input-group" style="margin-bottom: 5px">
+                      <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="col-lg-12">
+                    <div class="input-group" style="margin-bottom: 5px">
+                      <input type="password" class="form-control" placeholder="Password">
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="col-lg-12">
+                    <button type="button" class="btn btn-default">
+                      Login
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="btn-group">
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Select Language <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Spanish</a></li>
+                    <li><a href="#">French</a></li>
+                    <li><a href="#">German</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <div class="col-md-4 col-sm-6 col-xs-6">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Check existing reservation">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Submit</button>
+                  </span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Hello, and welcome to our community.</h1>
+        <div class="row">
+          <div class="col-md-3">  
+            <div class="input-group">
+              <label class="control-label" for="locations">Where do you want to stay?</label>
+              <input type="text" class="form-control" placeholder="Destination, Hotels" aria-describedby="basic-addon2" id="locations">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label class="control-label" for="dpd1">Check in: </label>
+            <input class="form-control" type="text" id="dpd1" />
+          </div>
+          <div class="col-md-3">
+            <label class="control-label" for="dpd2">Check out: </label>
+            <input class="form-control" type="text" id="dpd2" />
+          </div>
+          <div class="col-md-1 num-guests">
+            <label class="control-label">Guests: </label>
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                1<span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu guests" role="menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <button type="button" class="btn btn-default" style="margin-top: 25px">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <div class="neighborhood-guides">
+      <div class="container">
+        <h2>Top Deals</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">    
+                    <img src="http://www.thewallpapers.org/photo/25739/Sheraton-Dameisha-Resort.jpg">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">    
+                    <img src="http://upload.wikimedia.org/wikipedia/en/7/77/Sheraton_Huzhou_Hot_Spring_Resort_exterior_night_view.jpg">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="http://www.edsaplan.com/files/media-image/portfolio/sheraton-huizhou-pool-view-823.jpg">
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="hotellocations.js"></script>
+  <script src="bootstrap-datepicker.js"></script>
+  <script src="datepicker.js"></script>
+  <script>
+    $('.dropdown-menu.member-login').find('.form-control').click(function (e) {
+      e.stopPropagation();
+    });;
+  </script>
+  <script>
+    $(".dropdown-menu li a").click(function(){
+      $(this).parents(".input-group-btn").find('.btn').text($(this).text());
+      $(this).parents(".input-group-btn").find('.btn').val($(this).text());
+    });
+  </script>
+  </body>
+</html>

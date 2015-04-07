@@ -1,0 +1,11 @@
+#map {
+	position: absolute;
+	width: 620px;
+	bottom: 0;
+	top: 47px;
+}
+
+.nav {
+	border-bottom: solid #A0A0A0;
+	border-bottom-width: 1px;
+}

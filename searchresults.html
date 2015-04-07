@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="searchres.css">
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAw4I85-snXXd8PEOqgIPxFmKKGXV3kgX8">
+    </script>
+
+  </head>
+
+  <body>
+    <div class="nav">
+      <div class="container">
+        <div class="row">
+          <ul class="pull-left">
+            <li class="dropdown">
+              <a data-toggle="dropdown" href="#">Member Login</a>
+              <ul class="dropdown-menu member-login" role="menu" aria-labelleby="dlabel">
+                <li>
+                  <div class="col-lg-12">
+                    <div class="input-group" style="margin-bottom: 5px">
+                      <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="col-lg-12">
+                    <div class="input-group" style="margin-bottom: 5px">
+                      <input type="password" class="form-control" placeholder="Password">
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="col-lg-12">
+                    <button type="button" class="btn btn-default">
+                      Login
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="btn-group">
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Select Language <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Spanish</a></li>
+                    <li><a href="#">French</a></li>
+                    <li><a href="#">German</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <div class="col-md-4 col-sm-6 col-xs-6">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Check existing reservation">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Submit</button>
+                  </span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="map"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="bootstrap-datepicker.js"></script>
+  <script src="datepicker.js"></script>
+  <script type="text/javascript">
+  function initialize() {
+    var map;
+    var options = {
+      zoom: 13,
+      center: { lat: 43.478539, lng: -80.535390 },
+    };
+    map = new google.maps.Map(document.getElementById('map'), options);
+    var infoWindow = new google.maps.InfoWindow();
+
+    var marker = new google.maps.Marker({
+      map: map,
+      position: new google.maps.LatLng(43.478539, -80.535390),
+      icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|5a93de'
+    });
+
+    google.maps.event.addListener(marker, 'click', function () {
+      infoWindow.close();
+      infoWindow.setContent('<div style="width: 220px;"><img border="0"style="max-height: 100%; max-width: 100%;" src="http://www.starwoodhotels.com/pub/media/3880/fpt3880ex.148867_lg.jpg"></div> <div style="text-align: center">Sheraton hotel#1 - $120/night</div>');
+      infoWindow.open(map, marker);
+      //Change the marker icon
+      marker.setIcon('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|A0A0A0');
+    });
+
+    var hotel1 = new google.maps.Marker({
+      map: map,
+      position: new google.maps.LatLng(43.490346, -80.530301),
+      icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|5a93de'
+    });
+
+    google.maps.event.addListener(hotel1, 'click', function () {
+      infoWindow.close();
+      infoWindow.setContent('<div style="width: 220px;"><img border="0"style="max-height: 100%; max-width: 100%;" src="http://www.starwoodhotels.com/pub/media/3880/fpt3880ex.148867_lg.jpg"></div> <div style="text-align: center">Sheraton hotel#2 - $220/night</div>');
+      infoWindow.open(map, hotel1);
+      //Change the marker icon
+      hotel1.setIcon('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|A0A0A0');
+    });
+    
+    var hotel2 = new google.maps.Marker({
+      map: map,
+      position: new google.maps.LatLng(43.475992, -80.517681),
+      icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|5a93de'
+    });
+
+    google.maps.event.addListener(hotel2, 'click', function () {
+      infoWindow.close();
+      infoWindow.setContent('<div style="width: 220px;"><img border="0"style="max-height: 100%; max-width: 100%;" src="http://www.starwoodhotels.com/pub/media/3880/fpt3880ex.148867_lg.jpg"></div> <div style="text-align: center">Sheraton hotel#3 - $180/night</div>');
+      infoWindow.open(map, hotel2);
+      //Change the marker icon
+      hotel2.setIcon('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|A0A0A0');
+    });
+
+  var hotel3 = new google.maps.Marker({
+      map: map,
+      position: new google.maps.LatLng(43.465425, -80.522037),
+      icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|5a93de'
+    });
+
+    google.maps.event.addListener(hotel3, 'click', function () {
+      infoWindow.close();
+      infoWindow.setContent('<div style="width: 220px;"><img border="0"style="max-height: 100%; max-width: 100%;" src="http://www.starwoodhotels.com/pub/media/3880/fpt3880ex.148867_lg.jpg"></div> <div style="text-align: center">Sheraton hotel#4 - $200/night</div>');
+      infoWindow.open(map, hotel3);
+      //Change the marker icon
+      hotel3.setIcon('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|A0A0A0');
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+  </body>
+</html>
