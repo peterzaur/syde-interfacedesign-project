@@ -29,6 +29,8 @@
 
 .nav .btn {
   padding: 2px 12px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .nav .form-control {
@@ -160,4 +162,12 @@ table .next {
 .btn {
   background-color: #acd1cd;;
   color: #653C33;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.btn:hover {
+  text-decoration: none;
 }

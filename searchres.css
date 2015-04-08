@@ -3,7 +3,7 @@
     position: absolute;
     width: 620px;
     bottom: 0;
-    top: 47px;
+    top: 51px;
 }
 
 .searchcontainer {
@@ -43,7 +43,7 @@
     border-top: solid #A0A0A0;
     border-top-width: 2px;
     overflow: scroll;
-    bottom: 0;
-    top: 135px;
+    bottom: 49px;
+    top: 163px;
     position: fixed;
 }

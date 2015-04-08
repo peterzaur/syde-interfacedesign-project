@@ -82,16 +82,18 @@
     <div class="sidebarleft">
       <div class="row">
         <div class="col-xs-4">
-          <input class="form-control" type="text" id="dpd1" placeholder="Check-in" />
+          <label class="control-label">Check-in </label>
+          <input class="form-control" type="text" id="dpd1" placeholder="Check-in" value="04/08/2015"/>
         </div>
         <div class="col-xs-4">
-          <input class="form-control" type="text" id="dpd2" placeholder="Check-out"/>
+          <label class="control-label">Check-out </label>
+          <input class="form-control" type="text" id="dpd2" placeholder="Check-out" value="04/09/2015"/>
         </div>
-        <div class="col-xs-4 num-guests">
+        <div class="col-xs-4 num-guests" style="padding-top: 25px;">
           <div class="num_guests" style="display:inline-block;">Guests: </div>
           <div class="input-group-btn">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-              1<span class="caret"></span>
+              2<span class="caret"></span>
             </button>
             <ul class="dropdown-menu guests" role="menu">
               <li><a href="#">1</a></li>
@@ -105,11 +107,11 @@
       <div class="row">
         <div class="col-xs-8">
           <label class="control-label">Rate x # of Nights: </label>
-          <input class="form-control" type="text" placeholder="x*y (make uneditable)" />
+          <input class="form-control" type="text" disabled value="$50 CAD X 1 Night" />
         </div>
         <div class="col-xs-4">
           <label class="control-label">Total </label>
-          <input class="form-control" type="text" placeholder="Equals (total - uneditable)"/>
+          <input class="form-control" type="text" disabled value="$50 CAD"/>
         </div>
       </div>
       <div class="row">
@@ -144,6 +146,9 @@
         <p>Curabitur cursus vehicula volutpat. Nulla sit amet nisi posuere sapien consequat aliquam. Curabitur eget odio purus. Pellentesque varius vehicula dictum. Aenean ac enim in justo fringilla malesuada in sed arcu. Morbi lorem nunc, malesuada quis risus nec, suscipit rhoncus felis. Nunc turpis leo, luctus pellentesque nisl in, tempus viverra.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit tellus, consequat eu turpis vel, auctor rutrum mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec porttitor diam id pretium vulputate. Donec mollis ex lectus, ac venenatis urna mattis ac. </p>
         <p>Suspendisse potenti. Suspendisse at est purus. Aliquam eu tortor nec massa hendrerit posuere in sed nisl. Sed non ligula nisi. Nullam ornare lorem non ligula rutrum, et sagittis nibh tempor. Morbi velit ex, dictum et feugiat at, dignissim ut massa. Vestibulum eu.</p>
+        <h2>User Reviews</h2>
+        <p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt faucibus euismod. Suspendisse tristique elementum nisi eget vestibulum. Sed dignissim purus quis sem pretium scelerisque. In et tincidunt sem. Sed volutpat dui ex, vitae gravida velit ornare et. Quisque at sem quis metus malesuada feugiat ac sit amet nisl. Quisque aliquam egestas elit at accumsan. Suspendisse vel purus nulla. <br> - User 1</i></p>        
+        <p><i>Morbi rhoncus fermentum odio in dictum. Nulla quis diam tortor. Maecenas eu sapien a turpis vulputate semper. Etiam pharetra velit non pulvinar convallis. In blandit facilisis eros ut interdum. Maecenas faucibus dui ut arcu pellentesque rhoncus. Integer elementum varius ligula. Aenean volutpat erat nec felis pretium egestas. Mauris eu convallis augue, nec ultricies ipsum. Sed a ex mi. Fusce suscipit ipsum turpis, et blandit elit gravida. <br> - User 2</i></p>
       </div>
     </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
