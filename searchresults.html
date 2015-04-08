@@ -113,7 +113,7 @@
           Low
         </div>
         <div class="col-lg-7">
-          <input type="hidden" class="single-slider" value="23" />
+          <input type="hidden" id="single-slider" class="single-slider" value="100" />
         </div>
         <div class="col-lg-1">
           High
@@ -197,9 +197,22 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="attrchange.js"></script>
   <script src="jquery.range-min.js"></script>
   <script src="bootstrap-datepicker.js"></script>
   <script src="datepicker.js"></script>
+  <script>
+    $('.single-slider').jRange({
+      from: 0,
+      to: 200,
+      step: 1,
+      scale: [0,50,100,150,200],
+      format: '%s',
+      width: 400,
+      showLabels: false,
+      theme: "theme-blue"
+    });
+  </script>
   <script type="text/javascript">
   function initialize() {
     var map;
@@ -265,26 +278,66 @@
         //Change the marker icon
         hotel3.setIcon('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|A0A0A0');
       });
+
+    var hotel4 = new google.maps.Marker({
+        map: map,
+        position: new google.maps.LatLng(43.480924,-80.526161),
+        icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|5a93de'
+      });
+
+      google.maps.event.addListener(hotel4, 'click', function () {
+        infoWindow.close();
+        infoWindow.setContent('<div style="width: 220px;"><img border="0"style="max-height: 100%; max-width: 100%;" src="http://www.starwoodhotels.com/pub/media/3880/fpt3880ex.148867_lg.jpg"></div> <div style="text-align: center">Sheraton hotel#4 - $200/night</div>');
+        infoWindow.open(map, hotel4);
+        //Change the marker icon
+        hotel4.setIcon('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|A0A0A0');
+      });
     }
 
+    $('.pointer').attrchange({
+      trackValues: true, /* Default to false, if set to true the event object is 
+        updated with old and new value.*/
+      callback: function (event) {
+        if ((event.newValue.match(/\d+/g)[0]) <= 90) {
+          addMarker();
+        }
+      //event               - event object
+      //event.attributeName - Name of the attribute modified
+      //event.oldValue      - Previous value of the modified attribute
+      //event.newValue      - New value of the modified attribute
+      //Triggered when the selected elements attribute is added/updated/removed
+      }        
+    });
+    
     google.maps.event.addDomListener(window, 'load', initialize);
+
+    function addMarker() {
+      var map;
+      var options = {
+        zoom: 13,
+        center: { lat: 43.478539, lng: -80.535390 },
+      };
+      map = new google.maps.Map(document.getElementById('map'), options);
+      var infoWindow = new google.maps.InfoWindow();
+      var hotel4 = new google.maps.Marker({
+        map: map,
+        position: new google.maps.LatLng(43.480924,-80.526161),
+        icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|5a93de'
+      });
+
+      google.maps.event.addListener(hotel4, 'click', function () {
+        infoWindow.close();
+        infoWindow.setContent('<div style="width: 220px;"><img border="0"style="max-height: 100%; max-width: 100%;" src="http://www.starwoodhotels.com/pub/media/3880/fpt3880ex.148867_lg.jpg"></div> <div style="text-align: center">Sheraton hotel#4 - $200/night</div>');
+        infoWindow.open(map, hotel4);
+        //Change the marker icon
+        hotel4.setIcon('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|A0A0A0');
+      });
+    }
   </script>
   <script>
     $(".dropdown-menu li a").click(function(){
       $(this).parents(".input-group-btn").find('.btn').text($(this).text());
       $(this).parents(".input-group-btn").find('.btn').val($(this).text());
-    });
-  </script>
-  <script>
-    $('.single-slider').jRange({
-      from: 0,
-      to: 100,
-      step: 1,
-      scale: [0,50,100,150,200],
-      format: '%s',
-      width: 400,
-      showLabels: false,
-      theme: "theme-blue"
     });
   </script>
   </body>
