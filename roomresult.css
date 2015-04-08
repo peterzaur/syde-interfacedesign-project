@@ -8,11 +8,13 @@
 }
 
 .sidebarleft {
-    background-color: #efefef;
-    position: absolute;
-    right: 987px;
-    left: 0px;
-    height:620px;
+  background-color: #efefef;
+  position: absolute;
+  right: 987px;
+  left: 0px;
+  height:620px;
+  border-right: solid #000;
+  border-right-width: 1px;
 }
 
 .sidebarleft .row {
@@ -20,35 +22,41 @@
 	margin-left: 0px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+  border-bottom: solid #000;
+  border-bottom-width: 1px;
 }
 
 .sidebarleft h2 {
-    color: #393c3d;
-    font-size: 24px;
+  color: #393c3d;
+  font-size: 24px;
 }
 
 .sidebarleft p {
-    font-size: 15px;
-    margin-bottom: 13px;
+  font-size: 15px;
+  margin-bottom: 13px;
+}
+
+.sidebarleft .control-label {
+  color: #000;
 }
 
 .sidebarright {
-    background-color: #ff;
-    position: absolute;
-    right: 0px;
-    left: 453px;
-    height:620px;
+  background-color: #ffF;
+  position: absolute;
+  right: 0px;
+  left: 453px;
+  height:620px;
 }
 
 .sidebarleft .row .input-group-btn .btn {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .sidebarleft .input-group-btn {
-    display: inline-block;
+  display: inline-block;
 }
 
 .sidebarleft .num-guests {
-    text-align: left;
+  text-align: left;
 }

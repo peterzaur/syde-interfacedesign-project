@@ -1,3 +1,7 @@
+.nav {
+  background-color: #e2d9c9;
+}
+
 .nav a {
   color: #5a5a5a;
   font-size: 11px;
@@ -16,6 +20,11 @@
 
 .nav .container {
   margin-top: 10px;
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 .nav .btn {
@@ -45,6 +54,8 @@
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-y: -132px;
+  margin-bottom: 0px;
 }
 
 .jumbotron .container {
@@ -57,6 +68,11 @@
   font-size: 48px;  
   font-family: 'Shift', sans-serif;
   font-weight: bold;
+  text-shadow: black 5px 8px 22px;
+}
+
+.jumbotron .control-label {
+  text-shadow: black 2px 3px 3px;
 }
 
 .jumbotron p {
