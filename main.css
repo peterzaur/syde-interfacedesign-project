@@ -45,6 +45,10 @@
   margin-right: inherit;
 }
 
+.nav .dropdown-menu {
+  background-color: #e2d9c9;
+}
+
 .nav .pull-left .btn-group .input-group-btn {
   display: block;
 }
@@ -153,3 +157,7 @@ table .next {
   }
 }
 
+.btn {
+  background-color: #acd1cd;;
+  color: #653C33;
+}
