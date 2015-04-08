@@ -43,5 +43,7 @@
     border-top: solid #A0A0A0;
     border-top-width: 2px;
     overflow: scroll;
-    height: 647px;
+    bottom: 0;
+    top: 135px;
+    position: fixed;
 }

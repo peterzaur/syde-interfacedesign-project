@@ -3,7 +3,9 @@
   <head>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="roomresult.css">
   </head>
 
   <body>
@@ -73,76 +75,27 @@
         </div>
       </div>
     </div>
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Hello, and welcome to our community.</h1>
-        <div class="row">
-          <div class="col-md-3">  
-            <div class="input-group">
-              <label class="control-label" for="locations">Where do you want to stay?</label>
-              <input type="text" class="form-control" placeholder="Destination, Hotels" aria-describedby="basic-addon2" id="locations">
-            </div>
-          </div>
-          <div class="col-md-3">
-            <label class="control-label" for="dpd1">Check in: </label>
-            <input class="form-control" type="text" id="dpd1" />
-          </div>
-          <div class="col-md-3">
-            <label class="control-label" for="dpd2">Check out: </label>
-            <input class="form-control" type="text" id="dpd2" />
-          </div>
-          <div class="col-md-1 num-guests">
-            <label class="control-label">Guests: </label>
-            <div class="input-group-btn">
-              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="background-color: #fff">
-                1<span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu guests" role="menu">
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-1">
-            <a href="searchresults.html" style="color: #653C33">
-            <button type="button" class="btn btn-default" style="margin-top: 25px">
-              Submit
+    <div class= "room">
+      <div class="jumbotron">
+      </div>
+    </div> 
+    <div class="container">
+      <h2>Sheraton Waterloo Hotel</h2>
+      <h3>Your reservation is now confirmed! Your confirmation number is: 123456</h3>
+      <h4>Please review your information below</h4>
+      <p>This is where a review of the hotel information would be</p>
+      <div class="row">
+          <div class="col-md-6">
+            <a href="index.html">
+            <button type="button" class="btn btn-default btn-lg"> 
+              <span aria-hidden="true"></span>Return to homepage
             </button>
             </a>
           </div>
         </div>
-      </div>
-    </div> 
-    <div class="neighborhood-guides">
-      <div class="container">
-        <h2>Top Deals</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="thumbnail">    
-                    <img src="http://www.thewallpapers.org/photo/25739/Sheraton-Dameisha-Resort.jpg">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">    
-                    <img src="http://upload.wikimedia.org/wikipedia/en/7/77/Sheraton_Huzhou_Hot_Spring_Resort_exterior_night_view.jpg">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <img src="http://www.edsaplan.com/files/media-image/portfolio/sheraton-huizhou-pool-view-823.jpg">
-                </div>
-            </div>
-        </div>
-      </div>
     </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script src="hotellocations.js"></script>
-  <script src="bootstrap-datepicker.js"></script>
-  <script src="datepicker.js"></script>
   <script>
     $('.dropdown-menu.member-login').find('.form-control').click(function (e) {
       e.stopPropagation();
