@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="searchres.css">
+    <link rel="stylesheet" href="jquery.range.css">
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAw4I85-snXXd8PEOqgIPxFmKKGXV3kgX8">
     </script>
-
   </head>
 
   <body>
@@ -74,10 +74,125 @@
       </div>
     </div>
     <div id="map"></div>
-
+    <div class="searchcontainer">
+      <div class="row">
+        <div class="col-lg-3" style="padding-top: 7px;">
+          Room Preferences
+        </div>
+        <div class="col-lg-3">
+          <input class="form-control" type="text" id="dpd1" placeholder="Check-in" />
+        </div>
+        <div class="col-lg-3">
+          <input class="form-control" type="text" id="dpd2" placeholder="Check-out"/>
+        </div>
+        <div class="col-lg-3 num-guests">
+          <div class="num_guests" style="display:inline-block;">Guests: </div>
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              1<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu guests" role="menu">
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2">
+          Price Range
+        </div>
+        <div class="col-lg-1">
+          Low
+        </div>
+        <div class="col-lg-7">
+          <input type="hidden" class="single-slider" value="23" />
+        </div>
+        <div class="col-lg-1">
+          High
+        </div>
+      </div>
+      <div class="searchresults">
+        <a href="http://google.com">
+        <div class="row">
+          <div class="col-lg-3">
+            <img border="0"style="max-height: 100%; max-width: 100%;" src="http://www.starwoodhotels.com/pub/media/3880/fpt3880ex.148867_lg.jpg">
+          </div>
+          <div class="col-lg-6">
+            Sheraton Centre Waterloo Hotel <br>
+            123 King St. <br>
+            Waterloo, ON
+          </div>
+        </div>
+        </a>
+        <a href="http://google.com">
+        <div class="row">
+          <div class="col-lg-3">
+            <img border="0"style="max-height: 100%; max-width: 100%;" src="http://www.starwoodhotels.com/pub/media/3880/fpt3880ex.148867_lg.jpg">
+          </div>
+          <div class="col-lg-6">
+            Sheraton Centre Waterloo Hotel <br>
+            123 King St. <br>
+            Waterloo, ON
+          </div>
+        </div>
+        </a>
+        <a href="http://google.com">
+        <div class="row">
+          <div class="col-lg-3">
+            <img border="0"style="max-height: 100%; max-width: 100%;" src="http://www.starwoodhotels.com/pub/media/3880/fpt3880ex.148867_lg.jpg">
+          </div>
+          <div class="col-lg-6">
+            Sheraton Centre Waterloo Hotel <br>
+            123 King St. <br>
+            Waterloo, ON
+          </div>
+        </div>
+        </a>
+        <a href="http://google.com">
+        <div class="row">
+          <div class="col-lg-3">
+            <img border="0"style="max-height: 100%; max-width: 100%;" src="http://www.starwoodhotels.com/pub/media/3880/fpt3880ex.148867_lg.jpg">
+          </div>
+          <div class="col-lg-6">
+            Sheraton Centre Waterloo Hotel <br>
+            123 King St. <br>
+            Waterloo, ON
+          </div>
+        </div>
+        </a>
+        <a href="http://google.com">
+        <div class="row">
+          <div class="col-lg-3">
+            <img border="0"style="max-height: 100%; max-width: 100%;" src="http://www.starwoodhotels.com/pub/media/3880/fpt3880ex.148867_lg.jpg">
+          </div>
+          <div class="col-lg-6">
+            Sheraton Centre Waterloo Hotel <br>
+            123 King St. <br>
+            Waterloo, ON
+          </div>
+        </div>
+        </a>
+        <a href="http://google.com">
+        <div class="row">
+          <div class="col-lg-3">
+            <img border="0"style="max-height: 100%; max-width: 100%;" src="http://www.starwoodhotels.com/pub/media/3880/fpt3880ex.148867_lg.jpg">
+          </div>
+          <div class="col-lg-6">
+            Sheraton Centre Waterloo Hotel <br>
+            123 King St. <br>
+            Waterloo, ON
+          </div>
+        </div>
+        </a>
+      </div>
+    </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="jquery.range-min.js"></script>
   <script src="bootstrap-datepicker.js"></script>
   <script src="datepicker.js"></script>
   <script type="text/javascript">
@@ -132,22 +247,40 @@
       hotel2.setIcon('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|A0A0A0');
     });
 
-  var hotel3 = new google.maps.Marker({
-      map: map,
-      position: new google.maps.LatLng(43.465425, -80.522037),
-      icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|5a93de'
-    });
+    var hotel3 = new google.maps.Marker({
+        map: map,
+        position: new google.maps.LatLng(43.465425, -80.522037),
+        icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|5a93de'
+      });
 
-    google.maps.event.addListener(hotel3, 'click', function () {
-      infoWindow.close();
-      infoWindow.setContent('<div style="width: 220px;"><img border="0"style="max-height: 100%; max-width: 100%;" src="http://www.starwoodhotels.com/pub/media/3880/fpt3880ex.148867_lg.jpg"></div> <div style="text-align: center">Sheraton hotel#4 - $200/night</div>');
-      infoWindow.open(map, hotel3);
-      //Change the marker icon
-      hotel3.setIcon('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|A0A0A0');
-    });
-  }
+      google.maps.event.addListener(hotel3, 'click', function () {
+        infoWindow.close();
+        infoWindow.setContent('<div style="width: 220px;"><img border="0"style="max-height: 100%; max-width: 100%;" src="http://www.starwoodhotels.com/pub/media/3880/fpt3880ex.148867_lg.jpg"></div> <div style="text-align: center">Sheraton hotel#4 - $200/night</div>');
+        infoWindow.open(map, hotel3);
+        //Change the marker icon
+        hotel3.setIcon('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|A0A0A0');
+      });
+    }
 
-  google.maps.event.addDomListener(window, 'load', initialize);
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+  <script>
+    $(".dropdown-menu li a").click(function(){
+      $(this).parents(".input-group-btn").find('.btn').text($(this).text());
+      $(this).parents(".input-group-btn").find('.btn').val($(this).text());
+    });
+  </script>
+  <script>
+    $('.single-slider').jRange({
+      from: 0,
+      to: 100,
+      step: 1,
+      scale: [0,50,100,150,200],
+      format: '%s',
+      width: 400,
+      showLabels: false,
+      theme: "theme-blue"
+    });
   </script>
   </body>
 </html>
