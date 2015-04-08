@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="roomresult.css">
+    <link rel="stylesheet" href="payment.css">
   </head>
 
   <body>
@@ -75,11 +75,13 @@
         </div>
       </div>
     </div>
-    <div class= "room">
-      <div class="jumbotron">
-      </div>
-    </div> 
+
     <div class="sidebarleft">
+      <div class="row">
+        <div class="col-xs-12">
+          <img src="http://s3.amazonaws.com/mprgenieproduction/binaries/6834/7_Room_1CC_AF_LR_.jpg" style="width: 100%;">
+        </div>
+      </div>
       <div class="row">
         <div class="col-xs-4">
           <input class="form-control" type="text" id="dpd1" placeholder="Check-in" />
@@ -128,20 +130,91 @@
     <div class="sidebarright">
       <div class="container">
         <h2>Sheraton Waterloo Hotel</h2>
+        <h3>Review your payment information</h3>
         <div class="row">
           <div class="col-md-6">
-            <button type="button" class="btn btn-default btn-lg"> 
-              <span aria-hidden="true"></span> <a href="payment.html">Book Now!</a>
-            </button> <br><br>
+            <div class="input-group">
+              <label class="control-label">Full Name</label>
+              <input type="text" class="form-control" disabled aria-describedby="basic-addon2">
+            </div>
           </div>
         </div>
-        <p>This is where a description of the hotel would be</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt faucibus euismod. Suspendisse tristique elementum nisi eget vestibulum. Sed dignissim purus quis sem pretium scelerisque. In et tincidunt sem. Sed volutpat dui ex, vitae gravida velit ornare et. Quisque at sem quis metus malesuada feugiat ac sit amet nisl. Quisque aliquam egestas elit at accumsan. Suspendisse vel purus nulla.</p>
-        <p>Morbi rhoncus fermentum odio in dictum. Nulla quis diam tortor. Maecenas eu sapien a turpis vulputate semper. Etiam pharetra velit non pulvinar convallis. In blandit facilisis eros ut interdum. Maecenas faucibus dui ut arcu pellentesque rhoncus. Integer elementum varius ligula. Aenean volutpat erat nec felis pretium egestas. Mauris eu convallis augue, nec ultricies ipsum. Sed a ex mi. Fusce suscipit ipsum turpis, et blandit elit gravida.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius non ipsum quis accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum pulvinar, enim id congue porttitor, mauris mi efficitur orci, fringilla maximus leo ex et neque. Duis in facilisis eros. Maecenas luctus, velit ultricies maximus posuere, tortor tortor consectetur quam, in vehicula enim sem vitae nisl. Aliquam vel sapien congue, pretium neque a, convallis ante. Etiam vitae velit quis lacus vestibulum finibus.</p>
-        <p>Curabitur cursus vehicula volutpat. Nulla sit amet nisi posuere sapien consequat aliquam. Curabitur eget odio purus. Pellentesque varius vehicula dictum. Aenean ac enim in justo fringilla malesuada in sed arcu. Morbi lorem nunc, malesuada quis risus nec, suscipit rhoncus felis. Nunc turpis leo, luctus pellentesque nisl in, tempus viverra.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit tellus, consequat eu turpis vel, auctor rutrum mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec porttitor diam id pretium vulputate. Donec mollis ex lectus, ac venenatis urna mattis ac. </p>
-        <p>Suspendisse potenti. Suspendisse at est purus. Aliquam eu tortor nec massa hendrerit posuere in sed nisl. Sed non ligula nisi. Nullam ornare lorem non ligula rutrum, et sagittis nibh tempor. Morbi velit ex, dictum et feugiat at, dignissim ut massa. Vestibulum eu.</p>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <label class="control-label">Street Address</label>
+              <input type="text" class="form-control" disabled aria-describedby="basic-addon2">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <label class="control-label">City</label>
+              <input type="text" class="form-control" disabled aria-describedby="basic-addon2">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <label class="control-label">Country</label>
+              <input type="text" class="form-control" disabled aria-describedby="basic-addon2">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <label class="control-label">Postal Code</label>
+              <input type="text" class="form-control" disabled aria-describedby="basic-addon2">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <label class="control-label">Telephone Num.</label>
+              <input type="text" class="form-control" disabled aria-describedby="basic-addon2">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <label class="control-label">Email</label>
+              <input type="text" class="form-control" disabled aria-describedby="basic-addon2">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <label class="control-label">Credit Card Number</label>
+              <input type="text" class="form-control" disabled aria-describedby="basic-addon2">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <label class="control-label">Security Number</label>
+              <input type="password" class="form-control" disabled aria-describedby="basic-addon2">
+            </div>
+          </div>
+        </div>
+        <div class="row pull-right" style="padding-top: 10px">
+          <div class="col-md-6" style="padding-right: 60px">
+            <button type="button" class="btn btn-default btn-lg"> 
+              <span aria-hidden="true"></span> <a href="confirmation.html">Confirm Payment</a>
+            </button>
+          </div>
+          <div class="col-md-6">
+            <button type="button" class="btn btn-default btn-lg"> 
+              <span aria-hidden="true"></span> <a href="index.html">Cancel</a>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>

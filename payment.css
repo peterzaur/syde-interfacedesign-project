@@ -1,20 +1,13 @@
-.room .jumbotron {
-  background-image:url('http://s3.amazonaws.com/mprgenieproduction/binaries/6834/7_Room_1CC_AF_LR_.jpg');
-  height: 500px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: 85%;
-  margin-bottom: 0px;
-}
-
 .sidebarleft {
   background-color: #efefef;
   position: absolute;
   right: 70%;
   left: 0px;
-  height:620px;
   border-right: solid #000;
   border-right-width: 1px;
+  overflow: scroll;
+  bottom: 0;
+  top: 47px;
 }
 
 .sidebarleft .row {
@@ -45,7 +38,12 @@
   position: absolute;
   right: 0px;
   left: 30%;
-  height:620px;
+  bottom: 0;
+  top: 47px;
+}
+
+.sidebarright label {
+  color: #000;
 }
 
 .sidebarleft .row .input-group-btn .btn {
@@ -72,4 +70,8 @@
 
 .btn a {
   color: #653C33;
+}
+
+.sidebarright .form-control {
+  width: 500px;
 }
