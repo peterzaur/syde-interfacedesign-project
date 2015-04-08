@@ -1,0 +1,54 @@
+.room .jumbotron {
+  background-image:url('http://s3.amazonaws.com/mprgenieproduction/binaries/6834/7_Room_1CC_AF_LR_.jpg');
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -150px;
+  margin-bottom: 0px;
+}
+
+.sidebarleft {
+    background-color: #efefef;
+    position: absolute;
+    right: 987px;
+    left: 0px;
+    height:620px;
+}
+
+.sidebarleft .row {
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.sidebarleft h2 {
+    color: #393c3d;
+    font-size: 24px;
+}
+
+.sidebarleft p {
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+
+.sidebarright {
+    background-color: #ff;
+    position: absolute;
+    right: 0px;
+    left: 453px;
+    height:620px;
+}
+
+.sidebarleft .row .input-group-btn .btn {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.sidebarleft .input-group-btn {
+    display: inline-block;
+}
+
+.sidebarleft .num-guests {
+    text-align: left;
+}
