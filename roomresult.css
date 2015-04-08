@@ -3,14 +3,14 @@
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -150px;
+  background-position-y: 85%;
   margin-bottom: 0px;
 }
 
 .sidebarleft {
   background-color: #efefef;
   position: absolute;
-  right: 987px;
+  right: 70%;
   left: 0px;
   height:620px;
   border-right: solid #000;
@@ -44,7 +44,7 @@
   background-color: #ffF;
   position: absolute;
   right: 0px;
-  left: 453px;
+  left: 30%;
   height:620px;
 }
 
@@ -59,4 +59,13 @@
 
 .sidebarleft .num-guests {
   text-align: left;
+}
+
+.sidebarright .container {
+  width: 970px;
+}
+
+.rating {
+  text-align: center;
+  font-size: 20px;
 }
