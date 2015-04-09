@@ -46,6 +46,11 @@
   color: #000;
 }
 
+.sidebarright .container .input-group input {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
 .sidebarleft .row .input-group-btn .btn {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
