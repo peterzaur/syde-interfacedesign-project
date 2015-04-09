@@ -171,3 +171,7 @@ a:hover {
 .btn:hover {
   text-decoration: none;
 }
+
+.modal-body label {
+  color: #fff;
+}
