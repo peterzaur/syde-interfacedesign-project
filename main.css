@@ -91,6 +91,12 @@
   border-bottom-left-radius: 4px;
 }
 
+.jumbotron .container .input-group .form-control {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+
 .learn-more {
   background-color: #f7f7f7;
 }
