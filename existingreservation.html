@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="roomresult.css">
+    <link rel="stylesheet" href="payment.css">
   </head>
 
   <body>
@@ -75,24 +75,26 @@
         </div>
       </div>
     </div>
-    <div class= "room">
-      <div class="jumbotron">
-      </div>
-    </div> 
+
     <div class="sidebarleft">
+      <div class="row">
+        <div class="col-xs-12">
+          <img src="http://s3.amazonaws.com/mprgenieproduction/binaries/6834/7_Room_1CC_AF_LR_.jpg" style="width: 100%;">
+        </div>
+      </div>
       <div class="row">
         <div class="col-xs-4">
           <label class="control-label">Check-in </label>
-          <input class="form-control" type="text" id="dpd1" placeholder="Check-in" value="04/08/2015"/>
+          <input class="form-control" disabled type="text" id="dpd1" placeholder="Check-in" value="04/08/2015"/>
         </div>
         <div class="col-xs-4">
           <label class="control-label">Check-out </label>
-          <input class="form-control" type="text" id="dpd2" placeholder="Check-out" value="04/09/2015"/>
+          <input class="form-control" disabled type="text" id="dpd1" placeholder="Check-in" value="04/09/2015"/>
         </div>
-        <div class="col-xs-4 num-guests" style="padding-top: 25px;">
+        <div class="col-xs-4 num-guests">
           <div class="num_guests" style="display:inline-block;">Guests: </div>
           <div class="input-group-btn">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="background-color: #efefef">
               2<span class="caret"></span>
             </button>
             <ul class="dropdown-menu guests" role="menu">
@@ -111,7 +113,7 @@
         </div>
         <div class="col-xs-4">
           <label class="control-label">Total </label>
-          <input class="form-control" type="text" disabled value="$50 CAD"/>
+          <input class="form-control" type="text" disabled value="$50 CAD" /> 
         </div>
       </div>
       <div class="row">
@@ -130,30 +132,95 @@
     <div class="sidebarright">
       <div class="container">
         <h2>Sheraton Waterloo Hotel</h2>
+        <h3>Existing Reservation</h3>
         <div class="row">
           <div class="col-md-6">
-            <a href="payment.html">
-            <button type="button" class="btn btn-default btn-lg"> 
-              <span aria-hidden="true"></span>Book Now!
-            </button>
-            </a> 
-            <a href="payment.html">
-            <button type="button" class="btn btn-default btn-lg" data-toggle="tooltip" data-placement="right" title="Redeem for 400 points ($40) by clicking below this button!"> 
-              <span aria-hidden="true"></span>Redeem using points!
-            </button>
-            </a> <br><br>
+            <div class="input-group">
+              <label class="control-label">Full Name</label>
+              <input type="text"  disabled class="form-control" aria-describedby="basic-addon2" value="Walter Ng">
+            </div>
           </div>
         </div>
-        <p>This is where a description of the hotel would be</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt faucibus euismod. Suspendisse tristique elementum nisi eget vestibulum. Sed dignissim purus quis sem pretium scelerisque. In et tincidunt sem. Sed volutpat dui ex, vitae gravida velit ornare et. Quisque at sem quis metus malesuada feugiat ac sit amet nisl. Quisque aliquam egestas elit at accumsan. Suspendisse vel purus nulla.</p>
-        <p>Morbi rhoncus fermentum odio in dictum. Nulla quis diam tortor. Maecenas eu sapien a turpis vulputate semper. Etiam pharetra velit non pulvinar convallis. In blandit facilisis eros ut interdum. Maecenas faucibus dui ut arcu pellentesque rhoncus. Integer elementum varius ligula. Aenean volutpat erat nec felis pretium egestas. Mauris eu convallis augue, nec ultricies ipsum. Sed a ex mi. Fusce suscipit ipsum turpis, et blandit elit gravida.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius non ipsum quis accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum pulvinar, enim id congue porttitor, mauris mi efficitur orci, fringilla maximus leo ex et neque. Duis in facilisis eros. Maecenas luctus, velit ultricies maximus posuere, tortor tortor consectetur quam, in vehicula enim sem vitae nisl. Aliquam vel sapien congue, pretium neque a, convallis ante. Etiam vitae velit quis lacus vestibulum finibus.</p>
-        <p>Curabitur cursus vehicula volutpat. Nulla sit amet nisi posuere sapien consequat aliquam. Curabitur eget odio purus. Pellentesque varius vehicula dictum. Aenean ac enim in justo fringilla malesuada in sed arcu. Morbi lorem nunc, malesuada quis risus nec, suscipit rhoncus felis. Nunc turpis leo, luctus pellentesque nisl in, tempus viverra.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elit tellus, consequat eu turpis vel, auctor rutrum mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec porttitor diam id pretium vulputate. Donec mollis ex lectus, ac venenatis urna mattis ac. </p>
-        <p>Suspendisse potenti. Suspendisse at est purus. Aliquam eu tortor nec massa hendrerit posuere in sed nisl. Sed non ligula nisi. Nullam ornare lorem non ligula rutrum, et sagittis nibh tempor. Morbi velit ex, dictum et feugiat at, dignissim ut massa. Vestibulum eu.</p>
-        <h2>User Reviews</h2>
-        <p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt faucibus euismod. Suspendisse tristique elementum nisi eget vestibulum. Sed dignissim purus quis sem pretium scelerisque. In et tincidunt sem. Sed volutpat dui ex, vitae gravida velit ornare et. Quisque at sem quis metus malesuada feugiat ac sit amet nisl. Quisque aliquam egestas elit at accumsan. Suspendisse vel purus nulla. <br> - User 1</i></p>        
-        <p><i>Morbi rhoncus fermentum odio in dictum. Nulla quis diam tortor. Maecenas eu sapien a turpis vulputate semper. Etiam pharetra velit non pulvinar convallis. In blandit facilisis eros ut interdum. Maecenas faucibus dui ut arcu pellentesque rhoncus. Integer elementum varius ligula. Aenean volutpat erat nec felis pretium egestas. Mauris eu convallis augue, nec ultricies ipsum. Sed a ex mi. Fusce suscipit ipsum turpis, et blandit elit gravida. <br> - User 2</i></p>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <label class="control-label">Street Address</label>
+              <input type="text"  disabled class="form-control" aria-describedby="basic-addon2" value="123 Ottawa St.">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <label class="control-label">City</label>
+              <input type="text"  disabled class="form-control" aria-describedby="basic-addon2" value="Waterloo">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <label class="control-label">Country</label>
+              <input type="text"  disabled class="form-control" aria-describedby="basic-addon2" value="Canada">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <label class="control-label">Postal Code</label>
+              <input type="text"  disabled class="form-control" aria-describedby="basic-addon2" value="N2L 3G1">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <label class="control-label">Telephone Num.</label>
+              <input type="text"  disabled class="form-control" aria-describedby="basic-addon2" value="(519) 123-4567">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <label class="control-label">Email</label>
+              <input type="text"  disabled class="form-control" aria-describedby="basic-addon2" value="walter.ng@email.com">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <label class="control-label">Credit Card Number</label>
+              <input type="text"  disabled class="form-control" aria-describedby="basic-addon2" value="123456789">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group">
+              <label class="control-label">3-Digit Security Number</label>
+              <input type="password" disabled class="form-control" aria-describedby="basic-addon2" value="">
+            </div>
+          </div>
+        </div>
+        <div class="row pull-right" style="padding-top: 10px">
+          <div class="col-md-6" style="padding-right: 60px">
+            <a href="existingreservationedit.html">
+            <button type="button" class="btn btn-default btn-lg"> 
+              <span aria-hidden="true"></span>Edit reservation
+            </button>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="index.html">
+            <button type="button" class="btn btn-default btn-lg"> 
+              <span aria-hidden="true"></span>Cancel
+            </button>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
@@ -161,9 +228,6 @@
   <script src="bootstrap-datepicker.js" type="text/javascript"></script>
   <script src="datepicker.js"></script>
   <script>
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    })
     $('.dropdown-menu.member-login').find('.form-control').click(function (e) {
       e.stopPropagation();
     });;
